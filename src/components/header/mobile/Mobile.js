@@ -1,17 +1,15 @@
-import React from "react";
-
-export const Mobile = () => {
+function Mobile() {
     return (
-        <div>
+        
+        <header>
+            <nav class="mobile-nav">
+                <ion-icon name="logo-instagram"></ion-icon>
+                <img src="./assets/img/logo.png" alt="logo-instagram"/>
+                <ion-icon name="paper-plane-outline"></ion-icon>
+            </nav>
+        </header>
 
-            <header>
-                <nav className="mobile-nav">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                    <img src="./assets/img/logo.png" alt="logo-instagram"/>
-                    <ion-icon name="paper-plane-outline"></ion-icon>
-                </nav>
-            </header>
-
-        </div>
     )
 }
+
+export default Mobile;
