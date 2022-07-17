@@ -1,14 +1,14 @@
+import Icons from "../../Icons";
+
 function Mobile() {
     return (
-        
         <header>
             <nav class="mobile-nav">
-                <ion-icon name="logo-instagram"></ion-icon>
+                <Icons iconName="logo-instagram" />
                 <img src="./assets/img/logo.png" alt="logo-instagram"/>
-                <ion-icon name="paper-plane-outline"></ion-icon>
+                <Icons iconName="paper-plane-outline" />
             </nav>
         </header>
-
     )
 }
 

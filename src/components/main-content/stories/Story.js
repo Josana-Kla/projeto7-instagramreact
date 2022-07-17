@@ -25,7 +25,7 @@ function Story() {
                     <p>{url.title}</p>
                 </div>
             ))}
-            <Icons iconName="chevron-forward-circle"></Icons>
+            <Icons iconName="chevron-forward-circle" />
         </div>
     )
 }

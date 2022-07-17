@@ -18,7 +18,7 @@ function Timeline() {
               <img src={menuTimeline.storyImage} alt={menuTimeline.title}/>
               <p>{menuTimeline.title}</p>
             </div>
-            <Icons iconName="ellipsis-horizontal-outline"></Icons>
+            <Icons iconName="ellipsis-horizontal-outline" />
           </div>
 
           <img src={menuTimeline.postImage} alt={menuTimeline.namePostImage} />

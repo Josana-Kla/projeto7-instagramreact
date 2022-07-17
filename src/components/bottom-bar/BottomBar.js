@@ -1,11 +1,13 @@
+import Icons from "../Icons";
+
 function BottomBar() {
     return(
         <div class="barra-inferior">
-            <ion-icon name="home"></ion-icon>
-            <ion-icon name="search-outline"></ion-icon>
-            <ion-icon name="add-circle-outline"></ion-icon>
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="person-outline"></ion-icon>
+            <Icons iconName="home" />
+            <Icons iconName="search-outline" />
+            <Icons iconName="add-circle-outline" />
+            <Icons iconName="heart-outline" />
+            <Icons iconName="person-outline" />
         </div>
     )
 }

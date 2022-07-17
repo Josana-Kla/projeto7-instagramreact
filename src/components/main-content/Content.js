@@ -1,4 +1,4 @@
-import Sidebar from "./sidebar/SIdebar";
+import Sidebar from "./sidebar/Sidebar";
 import Story from "./stories/Story";
 import Timeline from "./timeline/Timeline";
 
@@ -7,7 +7,6 @@ function Content() {
         <div>
             <div class="fundo-timeline">
                 <div class="feed-e-sidebar">
-            
                     <div class="feed"> 
                         <Story />
                         <Timeline />
@@ -18,6 +17,5 @@ function Content() {
         </div>
     )
 }
-
 
 export default Content;
