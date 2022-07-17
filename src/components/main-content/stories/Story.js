@@ -1,3 +1,5 @@
+import Icons from "../../Icons";
+
 function Story() {
     const urls = [
         { title: "9gag", img:"./assets/img/story1.png" },
@@ -23,7 +25,7 @@ function Story() {
                     <p>{url.title}</p>
                 </div>
             ))}
-            <ion-icon name="chevron-forward-circle"></ion-icon>
+            <Icons iconName="chevron-forward-circle"></Icons>
         </div>
     )
 }

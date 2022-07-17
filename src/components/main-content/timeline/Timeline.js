@@ -1,141 +1,55 @@
+import Icons from "../../Icons";
+
+const menuTimelines = [
+  { storyImage:"./assets/img/story2.png", title:"meowed", postImage:"./assets/img/gato-telefone 1.png", namePostImage:"gato-telefone", imageUserLiked:"./assets/img/respondeai 2.png", nameUserLiked:"respondeai", numberLikes:"101.523" },
+  { storyImage:"./assets/img/story3.png", title:"barked", postImage:"./assets/img/dog 1.png", namePostImage:"cachorro", imageUserLiked:"./assets/img/adorableanimals 2.png", nameUserLiked:"adorable_animals", numberLikes:"99.159" },
+  { storyImage:"./assets/img/story2.png", title:"meowed", postImage:"./assets/img/gato 2.png", namePostImage:"gato-2", imageUserLiked:"./assets/img/seguir2.png", nameUserLiked:"chibirdart", numberLikes:"30.159" }
+  //{ storyImage:"./assets/img/jambt.jpg", title:"jambt", postImage:"", namePostImage:"", imageUserLikes:"./assets/img/respondeai 2.png", nameUserLiked:"respondeai", numberLikes:"101.523" }
+]
+
+
 function Timeline() {
-    return (
-        <div>
-
-        
+  return (
+    <div>
+      {menuTimelines.map(menuTimeline => (
         <div class="linha-do-tempo">
-
-            <div class="menu-da-foto">
-                <div>
-                    <img src="./assets/img/story2.png" alt="meowed"/>
-                    <p>meowed</p>
-                </div>
-
-                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-            </div>
-
-            <img src="./assets/img/gato-telefone 1.png" alt="gato-telefone"/>
-
-            <div class="icones-acoes-imagem"> 
-                <div>
-                    <ion-icon name="heart-outline"></ion-icon>
-                    <ion-icon name="chatbubble-outline"></ion-icon>
-                    <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-
-                <ion-icon name="bookmark-outline"></ion-icon>
-            </div>
-
-            <div class="descricao-acoes-foto">
-                <img src="./assets/img/respondeai 2.png" alt="respondeai"/>
-                <p>
-                Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
-                </p>
-            </div>
-
-        </div>
-
-        <div class="linha-do-tempo">
-
-            <div class="menu-da-foto">
-                <div>
-                <img src="./assets/img/story3.png" alt="barked"/>
-                <p>barked</p>
-                </div>
-
-                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-            </div>
-
-          <img src="./assets/img/dog 1.png" alt="cachorro"/>
-
-          <div class="icones-acoes-imagem"> 
-            <div>
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-
-            <ion-icon name="bookmark-outline"></ion-icon>
-          </div>
-
-          <div class="descricao-acoes-foto">
-            <img src="./assets/img/adorableanimals 2.png" alt="adorable_animals"/>
-            <p>
-              Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-            </p>
-          </div>
-
-        </div>
-
-        <div class="linha-do-tempo">
-
           <div class="menu-da-foto">
             <div>
-              <img src="./assets/img/story2.png" alt="meowed"/>
-              <p>meowed</p>
+              <img src={menuTimeline.storyImage} alt={menuTimeline.title}/>
+              <p>{menuTimeline.title}</p>
             </div>
-
-            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            <Icons iconName="ellipsis-horizontal-outline"></Icons>
           </div>
 
-          <img src="./assets/img/gato 2.png" alt="gato-2"/>
-
-          <div class="icones-acoes-imagem"> 
-            <div>
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-
-            <ion-icon name="bookmark-outline"></ion-icon>
-          </div>
-
-          <div class="descricao-acoes-foto">
-            <img src="./assets/img/seguir2.png" alt="chibirdart"/>
-            <p>
-              Curtido por <strong>chibirdart</strong> e <strong>outras 30.159 pessoas</strong>
-            </p>
-          </div>
-
-        </div>
-
-        <div class="linha-do-tempo">
-
-          <div class="menu-da-foto">
-            <div>
-              <img src="./assets/img/jambt.jpg" alt="jambt"/>
-              <p>jambt</p>
-            </div>
-
-            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-          </div>
-
-          <video controls="controls" autoplay="autoplay">
+          <img src={menuTimeline.postImage} alt={menuTimeline.namePostImage} />
+          
+          {/*  <video controls="controls" autoplay="autoplay">
             <source src="./assets/video/video.mp4" type="video/mp4"/>
             <source src="./assets/video/video.ogv" type="video/ogv"/>
-          </video>
+            </video> */}
+
 
           <div class="icones-acoes-imagem"> 
             <div>
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
+              <Icons iconName="heart-outline" />
+              <Icons iconName="chatbubble-outline" />
+              <Icons iconName="paper-plane-outline" />
             </div>
-
-            <ion-icon name="bookmark-outline"></ion-icon>
+            <Icons iconName="bookmark-outline" />
           </div>
 
           <div class="descricao-acoes-foto">
-            <img src="./assets/img/respondeai 2.png" alt="respondeai"/>
+            <img src={menuTimeline.imageUserLiked} alt={menuTimeline.nameUserLiked}/>
             <p>
-              Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+              Curtido por <strong>{menuTimeline.nameUserLiked}</strong> e <strong>outras {menuTimeline.numberLikes} pessoas</strong>
             </p>
           </div>
 
         </div>
+      ))}
     </div>
-
-    )
+  )
 }
+
 
 export default Timeline;
