@@ -1,3 +1,5 @@
+import React from "react";
+
 import Icons from "../../Icons";
 
 const menuTimelines = [
@@ -9,6 +11,9 @@ const menuTimelines = [
 
 
 function Timeline() {
+  const [ setIconType , setIconColor ] = React.useState('heart-outline');
+  const [ setIconClass , setIconColorClass ] = React.useState('sem-curtida-coracao');
+
   return (
     <div>
       {menuTimelines.map(menuTimeline => (
@@ -21,8 +26,12 @@ function Timeline() {
             <Icons iconName="ellipsis-horizontal-outline" />
           </div>
 
-          <img src={menuTimeline.postImage} alt={menuTimeline.namePostImage} />
-          
+          <img src={menuTimeline.postImage} alt={menuTimeline.namePostImage} onClick={() => {
+            if(setIconType === "heart-outline") {
+              setIconColor("heart");
+              setIconColorClass("curtir-coracao")
+            }}} />
+                    
           {/*  <video controls="controls" autoplay="autoplay">
             <source src="./assets/video/video.mp4" type="video/mp4"/>
             <source src="./assets/video/video.ogv" type="video/ogv"/>
@@ -31,7 +40,15 @@ function Timeline() {
 
           <div class="icones-acoes-imagem"> 
             <div>
-              <Icons iconName="heart" class="" />
+              <ion-icon name={setIconType} class={setIconClass} onClick={() => {
+                  if(setIconType === "heart-outline") {
+                    setIconColor("heart");
+                    setIconColorClass("curtir-coracao")
+                  } else {
+                    setIconColor("heart-outline");
+                    setIconColorClass("sem-curtida-coracao")
+                  }
+                }}></ion-icon>
               <Icons iconName="chatbubble-outline" />
               <Icons iconName="paper-plane-outline" />
             </div>

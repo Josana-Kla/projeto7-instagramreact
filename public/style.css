@@ -196,6 +196,7 @@
   }
   
   .linha-do-tempo img {
+    cursor: pointer;
     width: 100%;
   }
   
@@ -223,11 +224,6 @@
     margin-right: 7px;
   }
 
-  .icones-acoes-imagem .heart {
-    background-color: #139EF2;
-    color: #139EF2;
-  }
-  
   .descricao-acoes-foto {
     display: flex;
     align-items: center;
@@ -346,7 +342,24 @@
   strong {
     font-weight: bold;
   }
+
+
+  /*         JS          */
+  .curtir-coracao {
+    color: #d80000;
+    cursor: pointer;
+    visibility: visible;
+    transform: translateY(0.8px);
+  }
+
+  .sem-curtida-coracao {
+    cursor: pointer;
+    visibility: visible;
+  }
   
+  .big-heart {
+    background-image: url(./assets/img/jambt.jpg);
+  }
   
   
   /*    ESCONDER SIDEBAR    */
