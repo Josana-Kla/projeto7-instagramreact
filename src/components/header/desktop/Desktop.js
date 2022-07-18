@@ -1,4 +1,5 @@
 import Icons from "../../Icons";
+import LogoInsta from "../LogoInsta";
 
 function Desktop() {
     return (
@@ -6,7 +7,7 @@ function Desktop() {
             <nav class="desktop-nav">
                 <div class="logos">
                     <Icons iconName="logo-instagram" />
-                    <img src="./assets/img/logo.png" alt="logo-instagram"/>
+                    <LogoInsta logo="./assets/img/logo.png" name="logo-instagram"/>
                 </div>
 
                 <input type="search" placeholder="Pesquisar"/>

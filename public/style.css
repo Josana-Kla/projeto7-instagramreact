@@ -222,6 +222,11 @@
   
     margin-right: 7px;
   }
+
+  .icones-acoes-imagem .heart {
+    background-color: #139EF2;
+    color: #139EF2;
+  }
   
   .descricao-acoes-foto {
     display: flex;

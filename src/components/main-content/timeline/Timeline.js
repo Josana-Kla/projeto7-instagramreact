@@ -31,7 +31,7 @@ function Timeline() {
 
           <div class="icones-acoes-imagem"> 
             <div>
-              <Icons iconName="heart-outline" />
+              <Icons iconName="heart" class="" />
               <Icons iconName="chatbubble-outline" />
               <Icons iconName="paper-plane-outline" />
             </div>
